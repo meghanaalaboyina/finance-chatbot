@@ -32,7 +32,7 @@ if st.button("Get Advice") and user_input:
     **inputs,
     max_new_tokens=200,
     temperature=0.7,
-    do_sample=False,                # Turn off random sampling
+    do_sample=True,                # Turn off random sampling
     repetition_penalty=1.2,         # Helps stop infinite loops
     pad_token_id=tokenizer.eos_token_id
 )
@@ -58,6 +58,7 @@ if st.session_state.chat_history:
     for i, (q, a) in enumerate(reversed(st.session_state.chat_history), 1):
         st.markdown(f"**Q{i}:** {q}")
         st.markdown(f"**A{i}:** {a}")
+
 
 
 
