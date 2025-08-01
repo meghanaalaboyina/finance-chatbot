@@ -5,7 +5,7 @@ import torch
 # Load model and tokenizer (first time takes ~1GB)
 @st.cache_resource
 def load_model():
-    model_name = "EleutherAI/gpt-neo-1.3B"  # Small, offline-compatible
+    model_name = "sshleifer/tiny-gpt2"  # Small, offline-compatible
     tokenizer = AutoTokenizer.from_pretrained(model_name)
     model = AutoModelForCausalLM.from_pretrained(model_name)
     return tokenizer, model
@@ -56,4 +56,5 @@ if st.session_state.chat_history:
     for i, (q, a) in enumerate(reversed(st.session_state.chat_history), 1):
         st.markdown(f"**Q{i}:** {q}")
         st.markdown(f"**A{i}:** {a}")
+
 
