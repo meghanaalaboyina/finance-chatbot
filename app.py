@@ -24,7 +24,8 @@ user_input = st.text_area("Ask me a financial question 👇")
 
 if st.button("Get Advice") and user_input:
     with st.spinner("Thinking..."):
-        prefix = f"You are a helpful financial advisor giving advice to a {user_type.lower()}.\n\nQuestion: {user_input}\nAnswer:"
+        prefix = f"Act as a financial advisor for a {user_type.lower()} and answer clearly.\nUser: {user_input}\nAdvisor:"
+
         inputs = tokenizer(prefix, return_tensors="pt").to("cpu")
 
         outputs = model.generate(
@@ -57,6 +58,7 @@ if st.session_state.chat_history:
     for i, (q, a) in enumerate(reversed(st.session_state.chat_history), 1):
         st.markdown(f"**Q{i}:** {q}")
         st.markdown(f"**A{i}:** {a}")
+
 
 
 
