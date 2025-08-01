@@ -28,13 +28,14 @@ if st.button("Get Advice") and user_input:
         inputs = tokenizer(prefix, return_tensors="pt").to("cpu")
 
         outputs = model.generate(
-            **inputs,
-            max_new_tokens=200,
-            temperature=0.7,
-            do_sample=True,
-            top_p=0.9,
-            pad_token_id=tokenizer.eos_token_id
-        )
+    **inputs,
+    max_new_tokens=150,
+    temperature=0.7,            # Try lowering this
+    do_sample=False,            # Turn off randomness
+    top_p=0.9,
+    pad_token_id=tokenizer.eos_token_id
+)
+
 
         reply = tokenizer.decode(outputs[0], skip_special_tokens=True)
         answer = reply.split("Answer:")[-1].strip()
@@ -56,5 +57,6 @@ if st.session_state.chat_history:
     for i, (q, a) in enumerate(reversed(st.session_state.chat_history), 1):
         st.markdown(f"**Q{i}:** {q}")
         st.markdown(f"**A{i}:** {a}")
+
 
 
