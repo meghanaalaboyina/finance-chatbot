@@ -30,13 +30,5 @@ An intelligent conversational AI system built with Streamlit and Hugging Face Tr
 - [Hugging Face Transformers](https://huggingface.co/transformers/)
 - [EleutherAI GPT-Neo](https://huggingface.co/EleutherAI/gpt-neo-1.3B)
 
----
 
-## 💻 Running Locally (Offline)
 
-> Requirements: Python 3.8+, pip, and around 5GB storage for first-time model load.
-
-### 1. Clone the Repository
-```bash
-git clone https://github.com/your-username/finance-chatbot.git
-cd finance-chatbot
