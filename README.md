@@ -28,7 +28,8 @@ An intelligent conversational AI system built with Streamlit and Hugging Face Tr
 - [Python](https://www.python.org/)
 - [Streamlit](https://streamlit.io/)
 - [Hugging Face Transformers](https://huggingface.co/transformers/)
-- [EleutherAI GPT-Neo](https://huggingface.co/EleutherAI/gpt-neo-1.3B)
+- [Gemini 2.5 Pro API](https://makersuite.google.com/app/apikey)
+
 
 
 
