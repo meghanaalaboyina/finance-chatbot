@@ -30,6 +30,10 @@ An intelligent conversational AI system built with Streamlit and Hugging Face Tr
 - [Hugging Face Transformers](https://huggingface.co/transformers/)
 - [Gemini 2.5 Pro API](https://makersuite.google.com/app/apikey)
 
+## 🚀 Live Project Demo
+
+Click here to try the chatbot:  
+👉 [Launch Personal Finance Chatbot](https://chatbot1-czfz3va9jv6lu6liwygmht.streamlit.app/)
 
 
 
